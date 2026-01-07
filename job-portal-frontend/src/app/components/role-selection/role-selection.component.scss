@@ -1,0 +1,136 @@
+.role-selection-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  padding: 20px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.hero-section {
+  text-align: center;
+  margin-bottom: 60px;
+
+  h1 {
+    font-size: 4rem; // Larger
+    font-weight: 800;
+    margin-bottom: 24px;
+
+    // Clear White Text with Glow instead of gradient fill to solve "blending"
+    color: #ffffff;
+    text-shadow: 0 0 40px rgba(99, 102, 241, 0.6); // Indigo Glow
+    letter-spacing: -2px;
+  }
+
+  p {
+    font-size: 1.4rem;
+    color: var(--text-secondary); // Light Slate
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+}
+
+.role-cards-container {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.role-card {
+  width: 320px;
+  // Dark Glass Background
+  background: rgba(30, 41, 59, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+
+  border-radius: 24px;
+  padding: 40px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  // Subtle gradient border effect
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  }
+
+  &:hover {
+    transform: translateY(-12px);
+    background: rgba(30, 41, 59, 0.8);
+    border-color: rgba(99, 102, 241, 0.5); // Primary color border on hover
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+
+    .icon-circle {
+      transform: scale(1.1) rotate(5deg);
+      background: var(--primary-color);
+      color: white;
+      box-shadow: 0 0 20px var(--primary-color); // Glow
+    }
+
+    .card-footer {
+      color: #fff;
+      transform: translateX(5px);
+    }
+  }
+
+  .icon-circle {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--primary-color); // Electric Indigo
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    transition: all 0.3s ease;
+
+    mat-icon {
+      font-size: 36px;
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #fff; // Bright White
+  }
+
+  p {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    margin-bottom: 32px;
+    line-height: 1.6;
+  }
+
+  .card-footer {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+  }
+}

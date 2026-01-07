@@ -1,0 +1,94 @@
+/* job-portal-frontend/src/app/components/job-applications-list/job-applications-list.component.scss */
+.container {
+  padding: 40px;
+  margin: 40px auto;
+  max-width: 1200px;
+
+  // Glassmorphism
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: 24px;
+  // Force white text at container level
+  color: #ffffff !important;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    color: #ffffff !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  margin: 48px 0;
+}
+
+.no-applications {
+  text-align: center;
+  margin: 60px 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.2rem;
+}
+
+.table-container {
+  overflow-x: auto;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+// Aggressive Table Styling
+table,
+.mat-table,
+.mat-mdc-table {
+  width: 100%;
+  background: transparent !important;
+}
+
+// Headers
+th,
+.mat-header-cell,
+.mat-mdc-header-cell {
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: #a5b4fc !important; // Light Indigo
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+// Cells
+td,
+.mat-cell,
+.mat-mdc-cell {
+  padding: 20px;
+  color: #ffffff !important; // Force White
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.95rem;
+
+  // Ensure inner text nodes are white
+  * {
+    color: #ffffff !important;
+  }
+}
+
+// Rows
+tr.mat-row,
+tr.mat-mdc-row {
+  &:hover {
+    background: rgba(255, 255, 255, 0.05) !important;
+  }
+}

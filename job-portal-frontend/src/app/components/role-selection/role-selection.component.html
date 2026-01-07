@@ -1,0 +1,32 @@
+<div class="role-selection-container">
+  <div class="hero-section">
+    <h1>Welcome to SkillLink</h1>
+    <p>Your gateway to career opportunities. Identify yourself to get started.</p>
+  </div>
+
+  <div class="role-cards-container">
+    <div class="role-card applicant" (click)="selectRole('applicant')" matRipple>
+      <div class="icon-circle">
+        <mat-icon>person</mat-icon>
+      </div>
+      <h2>Job Seeker</h2>
+      <p>Browse thousands of jobs and apply with a single click.</p>
+      <div class="card-footer">
+        <span>Find Jobs</span>
+        <mat-icon>arrow_forward</mat-icon>
+      </div>
+    </div>
+
+    <div class="role-card employer" (click)="selectRole('employer')" matRipple>
+      <div class="icon-circle">
+        <mat-icon>business</mat-icon>
+      </div>
+      <h2>Employer</h2>
+      <p>Post job openings and manage candidates efficiently.</p>
+      <div class="card-footer">
+        <span>Post Jobs</span>
+        <mat-icon>arrow_forward</mat-icon>
+      </div>
+    </div>
+  </div>
+</div>

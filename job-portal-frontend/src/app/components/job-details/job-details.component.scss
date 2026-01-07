@@ -1,0 +1,104 @@
+/* job-portal-frontend/src/app/components/job-details/job-details.component.scss */
+.container {
+  padding: 40px;
+  margin: 40px auto;
+  max-width: 900px;
+
+  // Glassmorphism
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: 24px;
+  color: #ffffff; // Force white globally in container
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+
+  .back-section {
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: color 0.3s;
+    font-weight: 500;
+
+    &:hover {
+      color: #ffffff;
+    }
+
+    mat-icon {
+      margin-right: 8px;
+    }
+  }
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  margin: 48px 0;
+}
+
+.job-card {
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #ffffff; // Force White
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 400;
+    margin-bottom: 32px;
+  }
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+  color: #ffffff; // Force White
+
+  mat-icon {
+    margin-right: 12px;
+    color: #818cf8; // Light Indigo
+  }
+}
+
+.divider {
+  margin: 32px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.job-description-section {
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #ffffff; // Force White
+  }
+}
+
+.job-description {
+  white-space: pre-line;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9); // High contrast white-ish
+}
+
+mat-card-actions {
+  padding: 32px 0 0;
+  display: flex;
+  gap: 16px;
+}
